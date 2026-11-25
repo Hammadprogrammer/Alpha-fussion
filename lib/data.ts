@@ -82,13 +82,13 @@ export const services: Service[] = [
     title: "Web Development",
     short: "Modern, scalable and SEO-friendly websites with Next.js, React and more.",
     description:
-      "Every business is unique, and so is every website we build. We start by understanding your goals, audience and brand, then craft a tailor-made solution using modern technologies like Next.js, React and Node.js. Whether you need a professional business website, a high-converting landing page, a powerful eCommerce store or a fully custom web application, we deliver clean, maintainable code and pixel-perfect design. Each site is built to load fast, rank well on search engines and stay secure, with an easy-to-use dashboard so you can manage content yourself. From the first idea to launch and beyond, our team is with you to keep your website growing alongside your business.",
+      "Every business is unique, and so is every website we build. Using Next.js, React and Node.js, we craft business sites, landing pages, eCommerce stores and custom web apps that load fast, rank well and stay secure, with an easy dashboard to manage your content.",
     icon: CodeXml,
-    image: "/images/coding.jpg",
-    heroImage: "/1.png",
+    image: "/web1.png",
+    heroImage: "/web1.png",
     aboutImage: "/web2.png",
     heroText:
-      "We design and develop modern, high-performance websites that help your business stand out online. From sleek business sites and landing pages to complex web applications and eCommerce stores, every project is built with clean code and the latest technologies like Next.js, React and Tailwind CSS. Our websites are fully responsive, SEO-friendly and optimized for speed, so your visitors enjoy a smooth experience on every device. We focus on security, scalability and easy content management, giving you a platform that grows with your business and turns visitors into loyal customers.",
+      "We design and develop modern, high-performance websites that help your business stand out online. Built with Next.js, React and Tailwind CSS, every site is fully responsive, SEO-friendly and optimized for speed, giving you a secure, scalable platform that turns visitors into loyal customers.",
     tint: "bg-brand-100 text-brand-600",
     highlights: ["Responsive & SEO-Friendly Design", "Fast Performance & Top Security", "Scalable for Future Growth"],
     features: [
@@ -108,14 +108,14 @@ export const services: Service[] = [
     title: "Mobile App Development",
     short: "Powerful and user-friendly apps for iOS & Android.",
     description:
-      "Your business deserves a mobile app that is built around your customers, not a generic template. We work closely with you to understand your users, goals and workflow, then design and develop a custom app for iOS and Android using proven technologies like React Native and Flutter. From on-demand services and eCommerce apps to booking systems, social platforms and internal business tools, we build apps with secure logins, real-time data, push notifications and seamless payment integration. Every app is thoroughly tested on real devices to ensure smooth performance and zero crashes. After launch, we handle App Store and Google Play publishing, updates and ongoing support so your app keeps improving as your business grows.",
+      "Your business deserves an app built around your customers, not a generic template. Using React Native and Flutter, we build custom iOS and Android apps with secure logins, real-time data, push notifications and payments, and handle store publishing and support.",
     icon: Smartphone,
-    image: "/images/mobile-app.jpg",
+    image: "/mob1.png",
     heroImage: "/mob1.png",
     heroAspect: "aspect-[1672/941]",
     aboutImage: "/mob2.png",
     heroText:
-      "We build powerful, user-friendly mobile apps that put your business right in your customers' pockets. Whether you need an iOS app, an Android app or a single cross-platform solution, our team turns your idea into a fast, beautiful and reliable product. Using modern frameworks like React Native and Flutter, we deliver native-like performance, smooth animations and intuitive designs that users love. Every app is built with secure APIs, cloud sync, push notifications and offline support to keep your users engaged anywhere. From the first wireframe to App Store and Google Play launch, we are with you at every step to help your app grow and succeed.",
+      "We build powerful, user-friendly mobile apps that put your business in your customers' pockets, with native-like performance, intuitive designs and offline support.",
     tint: "bg-indigo-100 text-indigo-600",
     highlights: ["iOS & Android from one codebase", "Smooth native-like performance", "Push notifications & offline support"],
     features: [
@@ -135,14 +135,14 @@ export const services: Service[] = [
     title: "Backend Development",
     short: "Scalable and secure backend systems with .NET, Node.js & more.",
     description:
-      "Every business runs on data, and a strong backend is what keeps it secure, organized and always available. We start by understanding your workflows, users and growth plans, then design a custom architecture that fits your exact needs instead of a one-size-fits-all solution. Using proven technologies like .NET, Node.js, Python, SQL Server, PostgreSQL and MongoDB, we build robust APIs, admin panels, payment integrations and third-party connections that power your websites and mobile apps. Every system is built with clean, well-documented code, automated testing and strong security practices such as encryption, authentication and role-based access. After launch, we monitor performance, optimize databases and scale your infrastructure so your backend keeps up as your business grows.",
+      "Every business runs on data, and a strong backend keeps it secure and always available. Using .NET, Node.js, Python, PostgreSQL and MongoDB, we build custom APIs, admin panels and integrations with clean code and strong security, then scale them as you grow.",
     icon: Server,
-    image: "/images/server.jpg",
+    image: "/bak1.png",
     heroImage: "/bak1.png",
     heroAspect: "aspect-[1672/941]",
     aboutImage: "/bak2.png",
     heroText:
-      "We build secure, scalable and high-performance backend systems that power your websites, mobile apps and business operations. From RESTful and GraphQL APIs to complex databases and microservices, our team engineers reliable server-side solutions using .NET, Node.js and Python. Every backend is designed with clean architecture, strong security and optimized performance to handle thousands of users without slowing down. We integrate payment gateways, third-party services and cloud platforms so all your systems work together seamlessly. With automated testing, monitoring and ongoing support, your backend stays fast, stable and ready to grow with your business.",
+      "We build secure, scalable and high-performance backend systems that power your websites, apps and operations. From REST and GraphQL APIs to databases and microservices, we engineer reliable solutions with .NET, Node.js and Python that handle thousands of users without slowing down.",
     tint: "bg-emerald-100 text-emerald-600",
     highlights: ["RESTful & GraphQL APIs", "Optimized database architecture", "Microservices ready"],
     features: [
@@ -162,14 +162,14 @@ export const services: Service[] = [
     title: "WordPress Solutions",
     short: "Custom WordPress websites, themes and plugins.",
     description:
-      "No two businesses are the same, so we never rely on cookie-cutter templates. We take time to understand your brand, audience and goals, then build a fully custom WordPress website with a unique theme, tailored plugins and a layout designed to convert visitors into customers. Whether you need a corporate site, a blog, a booking platform or a complete WooCommerce store, we deliver clean code, fast load times and strong SEO foundations. Your team gets an easy-to-use dashboard to update pages, products and posts without touching a single line of code. After launch, we keep your site secure with regular updates, backups and performance checks so it keeps working hard for your business.",
+      "No two businesses are the same, so we never rely on cookie-cutter templates. We build custom WordPress sites and WooCommerce stores with unique themes and tailored plugins, plus an easy dashboard, regular updates and backups to keep your site secure.",
     icon: Globe,
-    image: "/images/devices.jpg",
-    heroImage: "/w1.png",
+    image: "/wrod1.png",
+    heroImage: "/wrod1.png",
     heroAspect: "aspect-[1672/941]",
-    aboutImage: "/w2.png",
+    aboutImage: "/word2.png",
     heroText:
-      "We create beautiful, fast and easy-to-manage WordPress websites that help your business grow online. From custom themes and plugins to fully featured WooCommerce stores, every site is designed around your brand and built for performance. Our WordPress solutions are fully responsive, SEO-optimized and secured against common threats, so you can focus on your business with peace of mind. With a simple, user-friendly dashboard, you can update content, add products and publish posts in minutes. From setup and migration to ongoing maintenance and support, we handle everything to keep your website running smoothly.",
+      "We create beautiful, fast and easy-to-manage WordPress websites that help your business grow online. From custom themes and plugins to full WooCommerce stores, every site is responsive, SEO-optimized and secure, with a simple dashboard to update content in minutes.",
     tint: "bg-sky-100 text-sky-600",
     highlights: ["Custom themes & plugins", "WooCommerce stores", "Easy content management"],
     features: [
@@ -189,14 +189,14 @@ export const services: Service[] = [
     title: "AI & Integrations",
     short: "Integrate AI tools and build smart solutions.",
     description:
-      "Build smart and automate more with custom AI code written specifically for your business. Our developers combine modern technologies like React, Next.js, Node.js, Python and .NET with powerful AI models from OpenAI and Gemini to create features that off-the-shelf tools simply can't offer. We develop custom business logic, intelligent dashboards, document processing, recommendation engines and automated workflows that connect seamlessly with your existing systems. Every solution is built with clean, scalable and secure code, protecting your data while handling growing demand with ease. From idea to intelligent solution, we deliver AI-powered development that saves time, cuts costs and gives your business a real competitive edge.",
+      "Build smart and automate more with custom AI code for your business. We combine modern frameworks with OpenAI and Gemini to build intelligent dashboards and automated workflows.",
     icon: Bot,
-    image: "/images/ai.jpg",
+    image: "/ai1.png",
     heroImage: "/ai1.png",
     heroAspect: "aspect-[1672/941]",
     aboutImage: "/ai2.png",
     heroText:
-      "Smart technology, real business impact. We help businesses integrate AI into their websites, apps and daily operations to work faster and smarter. Our team connects leading AI platforms like ChatGPT, Gemini and DeepSeek directly into your products, creating intelligent chatbots and virtual assistants that support your customers 24/7. We automate repetitive business tasks, build custom AI solutions tailored to your workflow and develop AI-powered web and mobile applications that deliver real results. From strategy to deployment, we turn your ideas into intelligent solutions that save time, reduce costs and drive growth.",
+      "Smart technology, real business impact. We integrate ChatGPT, Gemini and DeepSeek into your websites and apps, building chatbots and virtual assistants that support customers 24/7, automating repetitive tasks and delivering AI solutions that save time and drive growth.",
     tint: "bg-violet-100 text-violet-600",
     highlights: ["AI Integrations (OpenAI, Gemini)", "Custom Features & Logic", "Automation & Workflows", "Scalable & Secure Code"],
     features: [
@@ -216,9 +216,14 @@ export const services: Service[] = [
     title: "Cloud & Deployment",
     short: "Deploy and scale your projects with Vercel, AWS & Cloudflare.",
     description:
-      "CI/CD pipelines, cloud infrastructure and monitoring so your applications stay online, fast and cost-efficient around the clock.",
+      "Your app is only as good as the infrastructure behind it. We set up CI/CD pipelines, Docker deployments and scalable hosting on Vercel, AWS and Cloudflare, with SSL, backups and 24/7 monitoring so your apps stay online, fast and cost-efficient.",
     icon: Cloud,
-    image: "/images/network.jpg",
+    image: "/cl1.png",
+    heroImage: "/cl1.png",
+    heroAspect: "aspect-[1672/941]",
+    aboutImage: "/cl2.png",
+    heroText:
+      "We deploy, scale and manage your applications in the cloud so they stay fast, secure and always online. From automated CI/CD pipelines to auto-scaling infrastructure on Vercel, AWS and Cloudflare, we ship updates in minutes with zero downtime and costs that stay under control.",
     tint: "bg-teal-100 text-teal-600",
     highlights: ["Automated CI/CD pipelines", "99.9% uptime monitoring", "Cost-optimized infrastructure"],
     features: [

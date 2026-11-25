@@ -18,7 +18,7 @@ export function MediaCard({ src, alt, play = false, direction = "left", classNam
     <Reveal direction={direction} className={`relative ${className}`}>
       {illustration && <div className="absolute -inset-2 rounded-[2rem] bg-brand-400/25 blur-3xl sm:-inset-4" />}
       <div className={`group relative overflow-hidden rounded-2xl shadow-2xl sm:rounded-3xl shadow-brand-900/20 ${aspect} ${illustration ? "animate-float bg-white ring-1 ring-brand-100" : ""}`}>
-        <Image src={src} alt={alt} fill sizes="(min-width: 1024px) 600px, 100vw" className={`transition-transform duration-700 group-hover:scale-105 ${illustration ? "object-contain" : "object-cover"}`} />
+        <Image src={src} alt={alt} fill sizes="(min-width: 1024px) 680px, 100vw" className={`transition-transform duration-700 group-hover:scale-105 ${illustration ? "object-contain" : "object-cover"}`} />
         {!illustration && <div className="absolute inset-0 bg-linear-to-tr from-navy-950/50 via-transparent to-brand-500/20" />}
         {play && (
           <button aria-label="Play video" className="absolute left-1/2 top-1/2 grid size-20 -translate-x-1/2 -translate-y-1/2 place-items-center">

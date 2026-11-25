@@ -16,7 +16,7 @@ export default function HomePage() {
         large
         badge="Innovative IT Solutions"
         title={<>Innovating Today, <br />Building <Highlight>Tomorrow</Highlight></>}
-        description="Alpha Fussion is a full-stack IT solutions company, delivering modern web, mobile and cloud solutions to help your business grow in the digital world. Alpha Fussion is a full-stack IT solutions company specializing in web development, mobile applications, and cloud-based solutions. We deliver innovative, scalable, and secure digital solutions that empower businesses to enhance efficiency, strengthen their online presence, and achieve sustainable growth."
+        description="Alpha Fussion is a full-stack IT solutions company delivering modern web, mobile, AI and cloud solutions that help your business grow in the digital world."
         image="/home.png"
         imageAlt="Alpha Fussion IT solutions: web, mobile, backend, WordPress, AI and cloud services"
         illustration

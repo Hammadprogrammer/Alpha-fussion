@@ -61,7 +61,7 @@ async function ServiceDetail({ params }: Pick<PageProps<"/services/[slug]">, "pa
         }
       />
 
-      <Section id="about" className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+      <Section id="about" className={`grid items-center gap-8 lg:gap-12 ${service.aboutImage ? "lg:grid-cols-[1fr_1.2fr]" : "lg:grid-cols-2"}`}>
         <Reveal direction="right">
           <Eyebrow>About Our Service</Eyebrow>
           <h2 className="mt-3 text-[1.7rem] font-extrabold leading-tight text-navy-900 sm:text-3xl">Custom {service.title} for Every Business</h2>
