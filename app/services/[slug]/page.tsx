@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Gauge, Play, ShieldCheck } from "lucide-react";
 import { processSteps, services } from "@/lib/data";
@@ -26,7 +27,15 @@ export async function generateMetadata({ params }: PageProps<"/services/[slug]">
   return s ? { title: s.title, description: s.short } : {};
 }
 
-export default async function ServiceDetailPage({ params }: PageProps<"/services/[slug]">) {
+export default function ServiceDetailPage({ params }: PageProps<"/services/[slug]">) {
+  return (
+    <Suspense fallback={<section className="bg-hero min-h-[560px]" />}>
+      <ServiceDetail params={params} />
+    </Suspense>
+  );
+}
+
+async function ServiceDetail({ params }: Pick<PageProps<"/services/[slug]">, "params">) {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();

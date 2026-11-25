@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -22,7 +23,15 @@ export async function generateMetadata({ params }: PageProps<"/blog/[slug]">): P
   return p ? { title: p.title, description: p.excerpt } : {};
 }
 
-export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">) {
+export default function BlogPostPage({ params }: PageProps<"/blog/[slug]">) {
+  return (
+    <Suspense fallback={<section className="bg-hero min-h-[420px]" />}>
+      <BlogPost params={params} />
+    </Suspense>
+  );
+}
+
+async function BlogPost({ params }: Pick<PageProps<"/blog/[slug]">, "params">) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
