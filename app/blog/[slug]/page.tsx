@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, CircleCheck, Clock } from "lucide-react";
 import { posts } from "@/lib/data";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -59,14 +59,37 @@ async function BlogPost({ params }: Pick<PageProps<"/blog/[slug]">, "params">) {
       </section>
 
       <div className="mx-auto -mt-24 max-w-4xl px-4 sm:-mt-32 sm:px-6">
-        <Reveal scale className="relative aspect-[16/9] overflow-hidden rounded-2xl shadow-2xl shadow-brand-900/30 sm:aspect-[16/8] sm:rounded-3xl">
+        <Reveal scale className="relative aspect-video overflow-hidden rounded-2xl bg-white shadow-2xl shadow-brand-900/30 sm:rounded-3xl">
           <Image src={post.image} alt={post.title} fill priority sizes="(min-width: 1024px) 900px, 100vw" className="object-cover" />
         </Reveal>
-        <article className="card mt-6 space-y-5 p-5 text-base leading-relaxed text-slate-700 sm:mt-10 sm:p-12 sm:text-lg">
-          <p className="text-lg font-medium text-navy-900 sm:text-xl">{post.excerpt}</p>
-          {post.body.map((para, i) => (
-            <Reveal key={i} delay={i * 0.05}><p>{para}</p></Reveal>
+        <article className="card mt-6 p-5 text-base leading-relaxed text-slate-700 sm:mt-10 sm:p-12">
+          <p className="border-l-4 border-brand-500 pl-4 text-lg font-medium text-navy-900 sm:text-xl">{post.excerpt}</p>
+          {post.body.map(({ heading, text }, i) => (
+            <Reveal key={heading} delay={i * 0.05} className="mt-8">
+              <h2 className="flex items-center gap-3 text-xl font-bold text-navy-900 sm:text-2xl">
+                <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-brand-100 text-sm font-bold text-brand-600">{String(i + 1).padStart(2, "0")}</span>
+                {heading}
+              </h2>
+              <p className="mt-3 sm:text-lg">{text}</p>
+            </Reveal>
           ))}
+          <Reveal className="mt-10 rounded-2xl bg-linear-to-br from-brand-50 to-brand-100 p-6 sm:p-8">
+            <h2 className="text-lg font-bold text-navy-900 sm:text-xl">Key Takeaways</h2>
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+              {post.takeaways.map((t) => (
+                <li key={t} className="flex items-start gap-2.5 text-sm font-medium text-navy-900 sm:text-base">
+                  <CircleCheck className="mt-0.5 size-5 shrink-0 fill-brand-600 text-white" />
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-brand-100 pt-6 sm:flex-row sm:items-center">
+            <p className="text-sm text-slate-600">Written by <span className="font-semibold text-navy-900">Alpha Fussion Team</span></p>
+            <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-brand-600 to-brand-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/30">
+              Discuss Your Project <ArrowRight className="size-4" />
+            </Link>
+          </div>
         </article>
       </div>
 

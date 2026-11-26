@@ -49,8 +49,11 @@ export default function AboutPage() {
         badge="About Alpha Fussion"
         title={<>Innovating Today, <br />Building <Highlight>Tomorrow</Highlight></>}
         description="Alpha Fussion is a full-service technology company that helps startups, growing businesses and established enterprises succeed in the digital world. We combine strategy, design and engineering to deliver websites, mobile applications, backend systems, AI integrations, cloud infrastructure and creative media that are built to perform. Every engagement is driven by a clear understanding of your goals, a transparent process and a commitment to quality, so you receive solutions that are secure, scalable and ready for the future."
-        image="/images/server.jpg"
-        imageAlt="Modern data center infrastructure"
+        image="/a2.png"
+        imageAlt="A team of passionate developers and creators"
+        illustration
+        aspect="aspect-[1376/768]"
+        floats={[]}
         actions={
           <>
             <Button href="/services">Explore Our Services</Button>
@@ -60,7 +63,7 @@ export default function AboutPage() {
       />
 
       <Section className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-        <MediaCard src="/images/tech-desk.jpg" alt="Laptop on a modern workspace" aspect="aspect-[4/3]" />
+        <MediaCard src="/a1.png" alt="Your trusted technology partner" aspect="aspect-[1376/768]" illustration />
         <Reveal direction="right">
           <SectionHeading align="left" eyebrow="Who We Are" title={<>Your Trusted <Highlight>Technology Partner</Highlight></>} />
           <p className="mt-4 text-[0.95rem] leading-relaxed text-slate-600 sm:text-base">

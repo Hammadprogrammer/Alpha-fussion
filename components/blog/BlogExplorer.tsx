@@ -32,13 +32,7 @@ export function BlogExplorer() {
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_300px]">
       <div>
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <p className="flex items-center gap-2 text-sm font-semibold text-brand-600"><span className="h-0.5 w-8 bg-current" />Our Blog</p>
-            <h2 className="mt-2 text-3xl font-extrabold text-navy-900">
-              {category ?? "Explore Our Latest Articles"}
-            </h2>
-          </div>
+        <div className="flex justify-end">
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value as "new" | "old")}
@@ -136,8 +130,8 @@ export function BlogExplorer() {
             {posts.slice(0, 3).map((p) => (
               <li key={p.slug}>
                 <Link href={`/blog/${p.slug}`} className="group flex gap-3">
-                  <span className="relative size-16 shrink-0 overflow-hidden rounded-lg">
-                    <Image src={p.image} alt={p.title} fill sizes="64px" className="object-cover transition-transform group-hover:scale-110" />
+                  <span className="relative aspect-video w-24 shrink-0 self-start overflow-hidden rounded-lg bg-white ring-1 ring-brand-100">
+                    <Image src={p.image} alt={p.title} fill sizes="96px" className="object-cover transition-transform group-hover:scale-110" />
                   </span>
                   <span>
                     <span className="line-clamp-2 text-sm font-semibold text-navy-900 group-hover:text-brand-600">{p.title}</span>
@@ -147,6 +141,19 @@ export function BlogExplorer() {
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="bg-hero relative overflow-hidden rounded-2xl p-6 text-white shadow-xl shadow-brand-900/30">
+          <h3 className="text-lg font-bold">Have a Project in Mind?</h3>
+          <p className="mt-2 text-sm leading-relaxed text-white/75">
+            Our experts are ready to help you plan, design and build the right digital solution for your business.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-brand-600 transition-transform hover:-translate-y-0.5"
+          >
+            Get a Free Consultation <ArrowRight className="size-4" />
+          </Link>
         </div>
       </aside>
     </div>
