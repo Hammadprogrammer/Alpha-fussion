@@ -315,14 +315,7 @@ export const nav: NavItem[] = [
     href: "/services",
     children: services.map((s) => ({ label: s.title, href: `/services/${s.slug}` })),
   },
-  {
-    label: "Solutions",
-    href: "/approach",
-    children: [
-      { label: "Our Approach", href: "/approach" },
-      { label: "Contact Us", href: "/contact" },
-    ],
-  },
+  { label: "Our Approach", href: "/approach" },
   { label: "About Us", href: "/about" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
@@ -407,10 +400,25 @@ export const techIcons: Record<string, string> = {
   Vercel: "/tech/vercel.svg",
   Cloudflare: "/tech/cloudflare.svg",
   "GitHub Actions": "/tech/githubactions.svg",
+  Elementor: "/tech/elementor.svg",
+  Gemini: "/tech/googlegemini.svg",
+  DeepSeek: "/tech/deepseek.svg",
+  LangChain: "/tech/langchain.svg",
+  "Premiere Pro": "/tech/premierepro.svg",
+  "After Effects": "/tech/aftereffects.svg",
+  "DaVinci Resolve": "/tech/davinciresolve.svg",
+  Photoshop: "/tech/photoshop.svg",
+  Illustrator: "/tech/illustrator.svg",
+  Figma: "/tech/figma.svg",
+  Canva: "/tech/canva.svg",
 };
 
 export const techs = ["React", "Next.js", "JavaScript", "TypeScript", "Node.js", ".NET", "Python", "C#", "Firebase", "WordPress", "Tailwind CSS"].map(
   (name) => ({ name, icon: techIcons[name] }),
+);
+
+export const allTechs = [...new Set(services.flatMap((s) => s.techs))].filter((t) => techIcons[t]).sort((a, b) =>
+  a.replace(/^\W+/, "").localeCompare(b.replace(/^\W+/, ""), "en", { sensitivity: "base" }),
 );
 
 export const faqs = [

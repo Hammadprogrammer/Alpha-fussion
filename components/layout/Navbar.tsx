@@ -62,10 +62,12 @@ export function Navbar() {
                       <Link
                         key={c.href}
                         href={c.href}
-                        className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-navy-900 transition-colors hover:bg-brand-50 hover:text-brand-600"
+                        className={`flex items-center justify-between rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-brand-50 hover:text-brand-600 ${
+                          pathname === c.href ? "bg-brand-50 font-semibold text-brand-600" : "text-navy-900"
+                        }`}
                       >
                         {c.label}
-                        <ArrowRight className="size-3.5 opacity-0 transition-all group-hover:opacity-60" />
+                        <ArrowRight className={`size-3.5 transition-all ${pathname === c.href ? "opacity-100" : "opacity-0 group-hover:opacity-60"}`} />
                       </Link>
                     ))}
                   </div>
@@ -112,7 +114,11 @@ export function Navbar() {
                   {item.children && (
                     <div className="ml-4 border-l border-brand-100 pl-3">
                       {item.children.map((c) => (
-                        <Link key={c.href} href={c.href} className="block py-2 text-sm text-slate-600 hover:text-brand-600">
+                        <Link
+                          key={c.href}
+                          href={c.href}
+                          className={`block py-2 text-sm hover:text-brand-600 ${pathname === c.href ? "font-semibold text-brand-600" : "text-slate-600"}`}
+                        >
                           {c.label}
                         </Link>
                       ))}

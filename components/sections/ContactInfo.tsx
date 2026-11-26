@@ -10,10 +10,10 @@ const items = [
 
 export function ContactInfo() {
   return (
-    <Stagger className="space-y-4">
+    <Stagger className="grid h-full auto-rows-fr gap-4">
       {items.map(({ icon: Icon, title, value, note, href }) => (
-        <StaggerItem key={title}>
-          <a href={href} className="card group flex items-center gap-4 p-5">
+        <StaggerItem key={title} className="h-full">
+          <a href={href} className="card group flex h-full items-center gap-4 p-5 sm:p-6">
             <span className="grid size-14 shrink-0 place-items-center rounded-full bg-brand-100 text-brand-600 transition-all duration-500 group-hover:bg-brand-600 group-hover:text-white">
               <Icon className="size-6" />
             </span>

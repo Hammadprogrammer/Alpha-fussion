@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import { Headphones, Mail, MapPin, MessageSquareText, Phone, Zap } from "lucide-react";
+import { Headphones, Zap } from "lucide-react";
 import { site } from "@/lib/data";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
@@ -25,10 +24,13 @@ export default function ContactPage() {
       <PageHero
         badge="Contact Us"
         title={<>Let&apos;s Build Something <Highlight>Amazing</Highlight> Together</>}
-        description="Have a project in mind, a question, or just want to say hello? We'd love to hear from you!"
-        image="/images/phone-app.jpg"
-        imageAlt="Smartphone"
-        floats={[Mail, MessageSquareText, Phone, MapPin]}
+        description="Have a project in mind, a question, or just want to say hello? We'd love to hear from you! Whether you're planning a new website, a mobile app, a custom backend or an AI-powered solution, our team is ready to help you turn your idea into reality. Reach out the way that suits you best: send us an email, drop a message through the form, give us a call or visit our office in Lahore. We connect with clients all around the world and make every conversation clear, friendly and focused on your goals. Our dedicated support team responds quickly, usually within 24 hours, and is available around the clock to answer your questions, share a free consultation and guide you through the next steps. Let's start the conversation and build something amazing together."
+        image="/c1.png"
+        imageAlt="Contact channels: email, chat, phone and support"
+        illustration
+        aspect="aspect-[1/1]"
+        imageClassName="object-cover object-[92%_50%] scale-110"
+        floats={[]}
         actions={chips.map(({ icon: Icon, label }) => (
           <span key={label} className="inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-white/5 px-5 py-2.5 text-sm">
             <Icon className="size-4 text-cyan-glow" /> {label}
@@ -36,13 +38,8 @@ export default function ContactPage() {
         ))}
       />
 
-      <Section className="grid gap-8 lg:grid-cols-[1fr_1.6fr]">
-        <div className="space-y-4">
-          <ContactInfo />
-          <Reveal direction="up" className="group relative aspect-[16/10] overflow-hidden rounded-2xl shadow-xl">
-            <Image src="/images/building.jpg" alt="Alpha Fussion office building" fill sizes="(min-width:1024px) 420px, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
-          </Reveal>
-        </div>
+      <Section className="grid items-stretch gap-8 lg:grid-cols-[1fr_1.6fr]">
+        <ContactInfo />
         <Reveal direction="left" className="card p-6 sm:p-10">
           <Eyebrow>Get In Touch</Eyebrow>
           <h2 className="mt-3 text-3xl font-extrabold text-navy-900">Send Us a Message</h2>
